@@ -59,17 +59,17 @@ faizah-portfolio/
 │   │   ├── 📄 Contact.tsx         # Form kontak dan informasi
 │   │   └── 📄 Footer.tsx          # Footer dengan navigasi cepat
 │   ├── 📄 App.tsx                 # Komponen utama aplikasi
-│   ├── 📄 main.tsx               # Entry point aplikasi
-│   └── 📄 index.css              # Global styles dan Tailwind imports
-├── 📄 index.html                 # HTML template
-├── 📄 package.json               # Dependencies dan scripts
-├── 📄 tailwind.config.js         # Konfigurasi TailwindCSS
-├── 📄 postcss.config.js          # Konfigurasi PostCSS
-├── 📄 tsconfig.json              # Konfigurasi TypeScript
-├── 📄 tsconfig.node.json         # Konfigurasi TypeScript untuk Node
-├── 📄 vite.config.ts             # Konfigurasi Vite
-├── 📄 .gitignore                 # Git ignore rules
-└── 📄 README.md                  # Dokumentasi proyek
+│   ├── 📄 main.tsx                # Entry point aplikasi
+│   └── 📄 index.css               # Global styles dan Tailwind imports
+├── 📄 index.html                  # HTML template
+├── 📄 package.json                # Dependencies dan scripts
+├── 📄 tailwind.config.js          # Konfigurasi TailwindCSS
+├── 📄 postcss.config.js           # Konfigurasi PostCSS
+├── 📄 tsconfig.json               # Konfigurasi TypeScript
+├── 📄 tsconfig.node.json          # Konfigurasi TypeScript untuk Node
+├── 📄 vite.config.ts              # Konfigurasi Vite
+├── 📄 .gitignore                  # Git ignore rules
+└── 📄 README.md                   # Dokumentasi proyek
 ```
 
 ## 🎨 Komponen & Halaman
@@ -215,8 +215,8 @@ graph TD
 ### **1. Clone atau Download Project**
 ```bash
 # Jika menggunakan git
-git clone <repository-url>
-cd faizah-portfolio
+git clone https://github.com/faizah11az/faizahazzahra.git
+cd faizahazzahra
 
 # Atau download dan extract ZIP file
 ```
@@ -279,7 +279,7 @@ npm run build
 npm install --save-dev gh-pages
 
 # Add script di package.json
-"homepage": "https://username.github.io/faizah-portfolio",
+"homepage": "https://faizah11az.github.io/faizahazzahra",
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d dist"
@@ -326,7 +326,6 @@ Button Padding: 0.75rem 1.5rem
 ```
 
 ### **🧠 UX Principles**
-
 1. **Minimalism**: Fokus pada konten penting
 2. **Accessibility**: Kontras warna yang baik, navigasi keyboard
 3. **Performance**: Optimized images, lazy loading
@@ -345,11 +344,7 @@ animate: { rotateX: 0, opacity: 1, y: 0 }
 hover: { rotateY: 2, scale: 1.02 }
 
 // Button Animation
-hover: { 
-  rotateY: ±5, 
-  scale: 1.05,
-  boxShadow: "0 10px 25px rgba(30, 58, 138, 0.3)"
-}
+hover: { rotateY: ±5, scale: 1.05, boxShadow: "0 10px 25px rgba(30, 58, 138, 0.3)" }
 ```
 
 #### **About Section**
@@ -373,11 +368,7 @@ animate: { rotateX: 0, opacity: 1, y: 0 }
 hover: { rotateY: 3, scale: 1.02, x: 10 }
 
 // Submit Button Animation
-hover: { 
-  rotateY: 2, 
-  scale: 1.02,
-  boxShadow: "0 10px 25px rgba(30, 58, 138, 0.3)"
-}
+hover: { rotateY: 2, scale: 1.02, boxShadow: "0 10px 25px rgba(30, 58, 138, 0.3)" }
 ```
 
 ### **🎪 Transition Effects**
@@ -433,56 +424,43 @@ theme: {
 ```
 
 ### **📝 Mengubah Konten**
+
 1. **Hero Section** (`Hero.tsx`):
-   ```typescript
-   // Ganti nama dan deskripsi
-   <h1>Nama Anda</h1>
-   <p>Deskripsi Anda</p>
-   ```
+```typescript
+// Ganti nama dan deskripsi
+<h1>Nama Anda</h1>
+<p>Deskripsi Anda</p>
+```
 
 2. **About Section** (`About.tsx`):
-   ```typescript
-   // Update personal info
-   const personalInfo = [
-     {
-       icon: BookOpen,
-       title: "Hobi Anda",
-       description: "Deskripsi hobi..."
-     }
-   ];
-   ```
+```typescript
+// Update personal info
+const personalInfo = [
+  { icon: BookOpen, title: "Hobi Anda", description: "Deskripsi hobi..." }
+];
+```
 
 3. **Contact Section** (`Contact.tsx`):
-   ```typescript
-   // Update contact information
-   const contactInfo = [
-     {
-       icon: Mail,
-       title: "Email",
-       value: "email@anda.com",
-       link: "mailto:email@anda.com"
-     }
-   ];
-   ```
+```typescript
+// Update contact information
+const contactInfo = [
+  { icon: Mail, title: "Email", value: "email@anda.com", link: "mailto:email@anda.com" }
+];
+```
 
 ### **🖼️ Mengganti Foto**
 1. **Upload foto** ke folder `public/` atau hosting online
 2. **Update URL** di komponen:
-   ```typescript
-   // Hero.tsx dan About.tsx
-   src="path/to/your/photo.jpg"
-   ```
+```typescript
+// Hero.tsx dan About.tsx
+src="path/to/your/photo.jpg"
+```
 
 ### **🔗 Mengupdate Social Links**
 Edit di `Contact.tsx`:
 ```typescript
 const socialLinks = [
-  {
-    icon: Linkedin,
-    name: "LinkedIn",
-    url: "https://linkedin.com/in/username",
-    color: "hover:text-blue-600"
-  }
+  { icon: Linkedin, name: "LinkedIn", url: "https://linkedin.com/in/username", color: "hover:text-blue-600" }
 ];
 ```
 
@@ -549,19 +527,12 @@ npm run build
 ```typescript
 // Reduce animation complexity on mobile
 const isMobile = window.innerWidth < 768;
-const animationProps = isMobile 
-  ? { scale: 1.05 } 
-  : { scale: 1.05, rotateY: 5 };
+const animationProps = isMobile ? { scale: 1.05 } : { scale: 1.05, rotateY: 5 };
 ```
 
 ### **Debug Mode**
 ```typescript
 // Enable Framer Motion debug
-<motion.div
-  animate={{ x: 100 }}
-  transition={{ duration: 2 }}
-  style={{ background: "red" }} // Visual debug
->
 ```
 
 ## 📄 Lisensi
@@ -569,12 +540,10 @@ const animationProps = isMobile
 ```
 © 2025 Faizah Azzahra. All Rights Reserved.
 
-Website portofolio pribadi ini dibuat dengan tujuan personal branding 
-dan representasi diri yang profesional. Semua konten, desain, dan 
-kode dalam proyek ini adalah milik pribadi Faizah Azzahra.
+Website portofolio pribadi ini dibuat dengan tujuan personal branding dan representasi diri yang profesional. 
+Semua konten, desain, dan kode dalam proyek ini adalah milik pribadi Faizah Azzahra. 
 
-Dilarang mengcopy, memodifikasi, atau menggunakan ulang tanpa 
-izin tertulis dari pemilik.
+Dilarang mengcopy, memodifikasi, atau menggunakan ulang tanpa izin tertulis dari pemilik.
 ```
 
 ---
@@ -583,17 +552,14 @@ izin tertulis dari pemilik.
 
 **Dibuat dengan ❤️ oleh Faizah Azzahra**
 
-Jika ada pertanyaan atau feedback mengenai website ini, 
-silahkan hubungi melalui:
+Jika ada pertanyaan atau feedback mengenai website ini, silahkan hubungi melalui:
 
-- 📧 Email: faizah.azzahra@example.com
-- 💼 LinkedIn: [Faizah Azzahra](https://linkedin.com/in/faizah-azzahra)
-- 📱 Instagram: [@faizah.azzahra](https://instagram.com/faizah.azzahra)
+- 📧 **Email**: faizahazzahra506@gmail.com
+- 📱 **Telepon**: +6287896693574
+- 📍 **Lokasi**: Liwa, Lampung Barat
+- 💼 **LinkedIn**: [Faizah Azzahra](https://linkedin.com/in/faizah-azzahra)
+- 📱 **Instagram**: [@faizah.azzahra](https://instagram.com/faizah.azzahra)
 
 ---
 
 *Terima kasih telah mengunjungi portofolio pribadi saya!* 🙏
-#   f a i z a h a z z a h r a  
- #   f a i z a h a z z a h r a  
- #   f a i z a h a z z a h r a  
- 
